@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>HTML</title>
+  
+  <!-- HTML -->
+  
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <details>
+<summary>index.html</summary>
+<textarea readonly style="width:100%; height:400px; font-family:monospace;">
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tendercare School - Complete Yearbook 2025/26</title>
+<style>
+:root {
+--primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+--glass-bg: rgba(255, 255, 255, 0.25);
+--glass-border: rgba(255, 255, 255, 0.18);
+--blur-amount: 10px;
+--text-primary: #1a202c;
+--text-secondary: #4a5568;
+--text-light: #a0aec0;
+--spacing-xs: 8px;
+--spacing-sm: 12px;
+--spacing-md: 16px;
+--spacing-lg: 24px;
+--spacing-xl: 32px;
+--radius-sm: 8px;
+--radius-md: 12px;
+--radius-lg: 16px;
+--radius-full: 9999px;
+--transition: all 0.3s ease;
+}
+
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body {
+font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+min-height: 100vh;
+color: var(--text-primary);
+}
+
+.glass-nav {
+background: var(--glass-bg);
+backdrop-filter: blur(var(--blur-amount));
+-webkit-backdrop-filter: blur(var(--blur-amount));
+border-bottom: 1px solid var(--glass-border);
+position: sticky;
+top: 0;
+z-index: 100;
+}
+
+.nav-content {
+max-width: 1200px;
+margin: 0 auto;
+padding: var(--spacing-md);
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.nav-left {
+display: flex;
+align-items: center;
+gap: var(--spacing-md);
+}
+
+.school-crest {
+width: 48px;
+height: 48px;
+background: var(--primary-gradient);
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 24px;
+}
+
+.school-crest::before {
+content: '🎓';
+}
+
+.nav-text h1 {
+font-size: 20px;
+font-weight: 700;
+color: white;
+}
+
+.nav-text p {
+font-size: 14px;
+color: rgba(255, 255, 255, 0.9);
+}
+
+.yearbook-container {
+max-width: 1200px;
+margin: 0 auto;
+padding: var(--spacing-xl) var(--spacing-md);
+}
+
+.yearbook-header {
+text-align: center;
+margin-bottom: var(--spacing-xl);
+}
+
+.yearbook-header h2 {
+font-size: 36px;
+font-weight: 700;
+color: white;
+margin-bottom: var(--spacing-sm);
+}
+
+.yearbook-header p {
+font-size: 18px;
+color: rgba(255, 255, 255, 0.9);
+margin-bottom: var(--spacing-lg);
+}
+
+.tabs-container {
+display: flex;
+gap: var(--spacing-sm);
+justify-content: center;
+margin-bottom: var(--spacing-xl);
+flex-wrap: wrap;
+}
+
+.tab-btn {
+background: var(--glass-bg);
+backdrop-filter: blur(var(--blur-amount));
+border: 1px solid var(--glass-border);
+padding: var(--spacing-sm) var(--spacing-lg);
+border-radius: var(--radius-full);
+color: white;
+font-weight: 600;
+cursor: pointer;
+transition: var(--transition);
+}
+
+.tab-btn:hover {
+background: rgba(255, 255, 255, 0.35);
+}
+
+.tab-btn.active {
+background: white;
+color: var(--text-primary);
+}
+
+.search-bar {
+max-width: 500px;
+margin: 0 auto var(--spacing-lg);
+padding: var(--spacing-md);
+display: flex;
+align-items: center;
+gap: var(--spacing-sm);
+background: var(--glass-bg);
+backdrop-filter: blur(var(--blur-amount));
+border: 1px solid var(--glass-border);
+border-radius: var(--radius-full);
+}
+
+.search-bar input {
+flex: 1;
+background: none;
+border: none;
+outline: none;
+color: white;
+font-size: 16px;
+}
+
+.search-bar input::placeholder {
+color: rgba(255, 255, 255, 0.7);
+}
+
+.student-grid {
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+gap: var(--spacing-md);
+}
+
+.glass-card {
+background: var(--glass-bg);
+backdrop-filter: blur(var(--blur-amount));
+-webkit-backdrop-filter: blur(var(--blur-amount));
+border: 1px solid var(--glass-border);
+border-radius: var(--radius-md);
+}
+
+.student-card {
+padding: var(--spacing-lg);
+display: flex;
+flex-direction: column;
+align-items: center;
+text-align: center;
+cursor: pointer;
+transition: var(--transition);
+}
+
+.student-card:hover {
+transform: translateY(-5px);
+background: rgba(255, 255, 255, 0.35);
+}
+
+.student-card h3 {
+color: white;
+margin-bottom: var(--spacing-xs);
+font-size: 18px;
+}
+
+.student-card p {
+color: rgba(255, 255, 255, 0.8);
+font-size: 13px;
+}
+
+.badge {
+padding: 4px 12px;
+border-radius: var(--radius-full);
+font-size: 12px;
+font-weight: 600;
+margin-top: var(--spacing-xs);
+}
+
+.badge-gold {
+background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
+color: #1a202c;
+}
+
+.tab-content {
+display: none;
+}
+
+.tab-content.active {
+display: block;
+animation: fadeIn 0.4s ease-out;
+}
+
+@keyframes fadeIn {
+from { opacity: 0; transform: translateY(10px); }
+to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+.student-grid {
+grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+}
+}
+</style>
+</head>
+<body>
+<nav class="glass-nav">
+<div class="nav-content">
+<div class="nav-left">
+<div class="school-crest"></div>
+<div class="nav-text">
+<h1>Tendercare School</h1>
+<p>Complete Yearbook • 2025/26</p>
+</div>
+</div>
+</div>
+</nav>
+
+<main class="yearbook-container">
+<div class="yearbook-header">
+<h2>Graduating Classes 2025/26</h2>
+<p>All Divisions</p>
+<div class="search-bar glass-card">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+<circle cx="11" cy="11" r="8"></circle>
+<path d="m21 21-4.35-4.35"></path>
+</svg>
+<input type="text" id="searchInput" placeholder="Search students...">
+</div>
+</div>
+
+<div class="tabs-container">
+<button class="tab-btn active" onclick="switchTab(0)">SS3 Science</button>
+<button class="tab-btn" onclick="switchTab(1)">SS3 Humanities</button>
+<button class="tab-btn" onclick="switchTab(2)">JSS3 A</button>
+<button class="tab-btn" onclick="switchTab(3)">JSS3 B</button>
+</div>
+
+<div id="ss3Science" class="tab-content active">
+<div class="student-grid" id="ss3ScienceGrid"></div>
+</div>
+
+<div id="ss3Humanities" class="tab-content">
+<div class="student-grid" id="ss3HumanitiesGrid"></div>
+</div>
+
+<div id="jss3a" class="tab-content">
+<div class="student-grid" id="jss3aGrid"></div>
+</div>
+
+<div id="jss3b" class="tab-content">
+<div class="student-grid" id="jss3bGrid"></div>
+</div>
+</main>
+
+<script>
+const graduationMedia = [
+'https://media.giphy.com/media/26u4lOMA8JKSnL9Uk/giphy.gif',
+'https://media.giphy.com/media/l0MYt5jPR6QX5pnqM/giphy.gif',
+'https://media.giphy.com/media/3oz8xEdgBBLqBj7LsA/giphy.gif',
+'https://media.giphy.com/media/26ufcYAkp8e66vanu/giphy.gif',
+'https://media.giphy.com/media/l0HlHJGHe3yAMhdQY/giphy.gif',
+'https://media.giphy.com/media/26uf4r3EldfX5Ykqk/giphy.gif',
+'https://media.giphy.com/media/l0HlQXlQ3nHyLMvte/giphy.gif',
+'https://media.giphy.com/media/26u4cqiYI30juCOGY/giphy.gif'
+];
+
+const students = {
+ss3Science: [
+{ name: "Angel", role: null, id: "TCH020" },
+{ name: "Bamise", role: null, id: "TCH014" },
+{ name: "Bright", role: "Head Girl", id: "TCH002" },
+{ name: "Dorcas", role: null, id: "TCH016" },
+{ name: "Enoch", role: null, id: "TCH012" },
+{ name: "Famous", role: null, id: "TCH004" },
+{ name: "Fauziyyah", role: null, id: "TCH007" },
+{ name: "Fawaz", role: null, id: "TCH021" },
+{ name: "Fiyin", role: null, id: "TCH011" },
+{ name: "Habitat", role: null, id: "TCH022" },
+{ name: "Kaosara", role: null, id: "TCH010" },
+{ name: "Khadija", role: null, id: "TCH015" },
+{ name: "Mercy", role: null, id: "TCH008" },
+{ name: "Michael", role: null, id: "TCH006" },
+{ name: "Moyin", role: null, id: "TCH017" },
+{ name: "Prosper", role: null, id: "TCH003" },
+{ name: "Rita", role: null, id: "TCH019" },
+{ name: "Rokibat", role: null, id: "TCH018" },
+{ name: "Samuel", role: null, id: "TCH005" },
+{ name: "Taiwo", role: null, id: "TCH013" },
+{ name: "Temi", role: "Head Boy", id: "TCH001" },
+{ name: "Zainab", role: null, id: "TCH009" }
+],
+ss3Humanities: [
+{ name: "Abdul Majeed Quadri", role: null, id: "TCH-H001" },
+{ name: "Abdul Razak Kehinde", role: null, id: "TCH-H002" },
+{ name: "Abuh God's Power", role: null, id: "TCH-H003" },
+{ name: "Adebayo David", role: null, id: "TCH-H004" },
+{ name: "Adeniran Moses", role: null, id: "TCH-H005" },
+{ name: "Adesanya Emmanuel", role: null, id: "TCH-H006" },
+{ name: "Adisa Fathia", role: null, id: "TCH-H007" },
+{ name: "Ajibola Roheemot", role: null, id: "TCH-H008" },
+{ name: "Amos Wisdom", role: null, id: "TCH-H009" },
+{ name: "Asiemor Divine", role: null, id: "TCH-H010" },
+{ name: "Enemali Ojotoeba", role: null, id: "TCH-H011" },
+{ name: "Falope Darasimi", role: null, id: "TCH-H012" },
+{ name: "Famakinwa Akorede", role: null, id: "TCH-H013" },
+{ name: "Folorunsho Petra", role: null, id: "TCH-H014" },
+{ name: "Muritala Rashidat", role: null, id: "TCH-H015" },
+{ name: "Olalere Aishat", role: null, id: "TCH-H016" },
+{ name: "Oyakan Emmanuel", role: null, id: "TCH-H017" },
+{ name: "Sowole Azeem", role: null, id: "TCH-H018" },
+{ name: "Tujiki David", role: null, id: "TCH-H019" },
+{ name: "Yakubu Happiness", role: null, id: "TCH-H020" }
+],
+jss3a: [
+{ name: "Abdul Rasheed Rodiat", role: null, id: "TCH-3A001" },
+{ name: "Abdul Sattar Yusuff", role: null, id: "TCH-3A002" },
+{ name: "Abdulsamod Oseni", role: null, id: "TCH-3A003" },
+{ name: "Adebayo Dorcas", role: null, id: "TCH-3A004" },
+{ name: "Adebayo Favour", role: null, id: "TCH-3A005" },
+{ name: "Adeniyi Darasimi", role: null, id: "TCH-3A006" },
+{ name: "Aduragbemi Waheed", role: null, id: "TCH-3A007" },
+{ name: "Afolayan Joshua", role: null, id: "TCH-3A008" },
+{ name: "Akanji Favour", role: null, id: "TCH-3A009" },
+{ name: "Akinbiyi Glory", role: null, id: "TCH-3A010" },
+{ name: "Al-Ameen Olatunji", role: null, id: "TCH-3A011" },
+{ name: "Albarka Garba", role: null, id: "TCH-3A012" },
+{ name: "Amusat Khalilulahi O.", role: null, id: "TCH-3A013" },
+{ name: "Aransiola", role: null, id: "TCH-3A014" },
+{ name: "Ayowole Emmanuel", role: null, id: "TCH-3A015" },
+{ name: "Balogun Jomiloju", role: null, id: "TCH-3A016" },
+{ name: "Blessing Sunny", role: null, id: "TCH-3A017" },
+{ name: "David Nathaniel", role: null, id: "TCH-3A018" },
+{ name: "Fausiyat Olowu", role: null, id: "TCH-3A019" },
+{ name: "Fawas Salawudeen", role: null, id: "TCH-3A020" },
+{ name: "Folorunsho Precious", role: null, id: "TCH-3A021" },
+{ name: "Godswill Ibhadore", role: null, id: "TCH-3A022" },
+{ name: "Idera Kolade", role: null, id: "TCH-3A023" },
+{ name: "Israel Oyewole", role: null, id: "TCH-3A024" },
+{ name: "Jomiloju Praise Irinyemi", role: null, id: "TCH-3A025" },
+{ name: "Maxwell Emmanuel", role: null, id: "TCH-3A026" },
+{ name: "Nanmwa Victor", role: null, id: "TCH-3A027" },
+{ name: "Nurudeen Nyakos", role: null, id: "TCH-3A028" },
+{ name: "Ogunlana Abdullahi", role: null, id: "TCH-3A029" },
+{ name: "Okwuabudike Victoria", role: null, id: "TCH-3A030" },
+{ name: "Oluborode True Vine", role: null, id: "TCH-3A031" },
+{ name: "Oluwanifemi Fatuki", role: null, id: "TCH-3A032" },
+{ name: "Priscilla Emmanuel", role: null, id: "TCH-3A033" },
+{ name: "Ramadan Owoyele", role: null, id: "TCH-3A034" },
+{ name: "Sonia C.C. Nelson", role: null, id: "TCH-3A035" },
+{ name: "Taiwo Yusuf", role: null, id: "TCH-3A036" },
+{ name: "Wisdom Donald", role: null, id: "TCH-3A037" }
+],
+jss3b: [
+{ name: "Abdul Razak Somod", role: null, id: "TCH-3B001" },
+{ name: "Adebisi Aishat", role: null, id: "TCH-3B002" },
+{ name: "Adebisi Ayomide", role: null, id: "TCH-3B003" },
+{ name: "Adebisi Yusuf", role: null, id: "TCH-3B004" },
+{ name: "Adeniyi Korede", role: null, id: "TCH-3B005" },
+{ name: "Adewunmi Oluwademilade", role: null, id: "TCH-3B006" },
+{ name: "Aduragbemi Popoola", role: null, id: "TCH-3B007" },
+{ name: "Agbo Favour", role: null, id: "TCH-3B008" },
+{ name: "Akinfe Christianah", role: null, id: "TCH-3B009" },
+{ name: "Alexander Folorunsho", role: null, id: "TCH-3B010" },
+{ name: "Ambrose Emmanuella", role: null, id: "TCH-3B011" },
+{ name: "Angel Medua", role: null, id: "TCH-3B012" },
+{ name: "Ariyo Moses", role: null, id: "TCH-3B013" },
+{ name: "Ayobami Olasunkanmi", role: null, id: "TCH-3B014" },
+{ name: "Ayoade Doris", role: null, id: "TCH-3B015" },
+{ name: "Balogun Tobiloba", role: null, id: "TCH-3B016" },
+{ name: "David Opatimeyin", role: null, id: "TCH-3B017" },
+{ name: "David Oyeniyi", role: null, id: "TCH-3B018" },
+{ name: "Emmanuella Soyode", role: null, id: "TCH-3B019" },
+{ name: "Enabulele Israel", role: null, id: "TCH-3B020" },
+{ name: "Eniola Rotimi", role: null, id: "TCH-3B021" },
+{ name: "Esther Lawal", role: null, id: "TCH-3B022" },
+{ name: "Faluyi Israel", role: null, id: "TCH-3B023" },
+{ name: "Feranmi Olukotun", role: null, id: "TCH-3B024" },
+{ name: "Gabriel Peace", role: null, id: "TCH-3B025" },
+{ name: "Kayode Olajesu", role: null, id: "TCH-3B026" },
+{ name: "Loveth Samson", role: null, id: "TCH-3B027" },
+{ name: "Naimat Nyakos", role: null, id: "TCH-3B028" },
+{ name: "Onafowokan Ridwan", role: null, id: "TCH-3B029" },
+{ name: "Peace Gabriel", role: null, id: "TCH-3B030" },
+{ name: "Peace Uduakhomo", role: null, id: "TCH-3B031" },
+{ name: "Zainab Samuel", role: null, id: "TCH-3B032" }
+]
+};
+
+function renderStudents(studentList, gridId) {
+const grid = document.getElementById(gridId);
+grid.innerHTML = '';
+studentList.forEach((student, idx) => {
+const card = document.createElement('div');
+card.className = 'student-card glass-card';
+const initials = student.name.split(' ').map(n => n[0]).join('').substring(0, 2).toUpperCase();
+const mediaIdx = idx % graduationMedia.length;
+card.innerHTML = `
+<img src="${graduationMedia[mediaIdx]}" alt="${student.name}" 
+style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; margin-bottom: 12px;"
+onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+<div style="width: 120px; height: 120px; border-radius: 50%; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); display: none; align-items: center; justify-content: center; font-size: 32px; font-weight: bold; color: white; margin-bottom: 12px;">${initials}</div>
+<h3>${student.name}</h3>
+${student.role ? `<span class="badge badge-gold">${student.role}</span>` : ''}
+<p>${student.id}</p>
+`;
+grid.appendChild(card);
+});
+}
+
+renderStudents(students.ss3Science, 'ss3ScienceGrid');
+renderStudents(students.ss3Humanities, 'ss3HumanitiesGrid');
+renderStudents(students.jss3a, 'jss3aGrid');
+renderStudents(students.jss3b, 'jss3bGrid');
+
+function switchTab(index) {
+const tabs = document.querySelectorAll('.tab-btn');
+const contents = document.querySelectorAll('.tab-content');
+tabs.forEach((tab, i) => {
+tab.classList.toggle('active', i === index);
+});
+contents.forEach((content, i) => {
+content.classList.toggle('active', i === index);
+});
+}
+
+document.getElementById('searchInput').addEventListener('input', (e) => {
+const searchTerm = e.target.value.toLowerCase();
+const cards = document.querySelectorAll('.student-card');
+cards.forEach(card => {
+const name = card.querySelector('h3').textContent.toLowerCase();
+if (name.includes(searchTerm)) {
+card.style.display = 'flex';
+} else {
+card.style.display = 'none';
+}
+});
+});
+</script>
+</body>
+</html>
+
+```
+</textarea>
+</details>
+  
+  <!-- Project -->
+  <script src="main.js"></script>
+</body>
+</html>
